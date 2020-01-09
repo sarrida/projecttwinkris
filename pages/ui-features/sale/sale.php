@@ -63,9 +63,9 @@
                                             <th>
                                                 วันที่ขาย
                                             </th>
-                                            <th>
+                                            <!-- <th>
                                                 ราคารวม
-                                            </th>
+                                            </th> -->
                                             <th>
                                                 สถานะ
                                             </th>
@@ -79,8 +79,7 @@
                                             <!-- SELECT sum(`amount`*`price`) as total FROM `sale_detail` -->
 
                                             <?php
-                                            $sql = "SELECT * FROM sale INNER JOIN sale_detail on sale_detail.sale_detail_id = sale.sale_id
-                                                                INNER JOIN customer on customer.c_id = sale.c_id  where  status like 'ยังไม่ชำระ'  ORDER BY sale.sale_id DESC ";
+                                            $sql = "SELECT * FROM sale INNER JOIN customer on customer.c_id = sale.c_id  ORDER BY sale.sale_id DESC ";
                                             $result = $conn->query($sql);
                                             $total = 0;
                                             $sum_price = 0;

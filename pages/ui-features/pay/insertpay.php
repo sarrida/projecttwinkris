@@ -98,7 +98,7 @@ function fill_unit_select_box($connect)
                                         ?>
                                         <div class=" col-md-6">
                                             <div class="form-group row">
-                                                <label class="col-sm-3 col-form-label">รหัสการขาย</label>
+                                                <label class="col-sm-3 col-form-label">ชื่อลูกค้า</label>
                                                 <div class=" col-sm-9">
                                                     <input type="sale_id" id="sale_id" class="form-control" name="sale_id" value=" <?php echo $sale_id . ' ' . $c_name . ' ' . $c_surename; ?>" />
                                                 </div>

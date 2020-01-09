@@ -46,7 +46,7 @@
                                                 รหัสการชำระ
                                             </th>
                                             <th>
-                                                รหัสการขาย
+                                                ชื่อลูกค้า
                                             </th>
                                             <th>
                                                 รูปภาพ
@@ -57,13 +57,13 @@
                                             <?php include('../../../lib/config.php') ?>
 
                                             <?php
-                                            $sql = "SELECT * FROM pay";
+                                            $sql = "SELECT * FROM pay  INNER JOIN sale on sale.sale_id=pay.sale_id  ";
                                             $result = $conn->query($sql);
                                             if ($result->num_rows > 0) {
                                                 while ($row = $result->fetch_assoc()) {
                                                     echo "<tr>";
                                                     echo "<td>" . $row["pay_id"] . "</td>";
-                                                    echo "<td>" . $row["sale_id"] . "</td>";
+                                                    echo "<td>" . $row["sale_id"] ."</td>";
                                                     echo '<td><img src="../pic/' . $row["p_img"] . '"style="width:50px;height:50px;"/></td>';
                                                     echo "<td>
 

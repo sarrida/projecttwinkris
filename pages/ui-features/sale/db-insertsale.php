@@ -32,7 +32,7 @@ if($number > 0)
 		}
 	}
 echo "Data successfully";
-// header('Location:order_mat.php');
+header('Location:order_mat.php');
 }else{
 	echo "Error";
 }
