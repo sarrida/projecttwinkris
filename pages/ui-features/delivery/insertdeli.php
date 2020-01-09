@@ -85,17 +85,7 @@ function fill_unit_select_box($connect)
                                         </div>
                                         <!-- รหัสอัตโนมัติของ รหัสการขาย -->
                                         <?php
-                                        $pay_id = 0;
-                                        $result = $conn->query("SELECT * FROM delivery INNER JOIN pay on pay.pay_id=delivery.pay_id");
-                                        $sql  = "SELECT * FROM delivery INNER JOIN pay on pay.pay_id=delivery.pay_id
-                                        ";
-                                        $query = mysqli_query($conn, $sql);
-                                        while ($result = mysqli_fetch_array($query)) {
-                                            $pay_id = $result['pay_id'];
-                                            // $c_name = $result['c_name'];
-                                            // $c_surename = $result['c_surename'];
-                                        }
-                                        $pay_id += 1;
+                                        $pay_id = $_GET['id'];
                                         ?>
                                         <div class=" col-md-6">
                                             <div class="form-group row">
@@ -106,8 +96,6 @@ function fill_unit_select_box($connect)
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- ข้อมูล  . ' ' . $c_name . ' ' . $c_surename -->
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group row">

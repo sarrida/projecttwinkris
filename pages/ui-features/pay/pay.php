@@ -67,7 +67,7 @@
                                                     echo '<td><img src="../pic/' . $row["p_img"] . '"style="width:50px;height:50px;"/></td>';
                                                     echo "<td>
 
-                                    <a href='../delivery/insertdeli.php'><button type='button' class='btn btn-outline-info btn-rounded btn-icon'><i class='mdi mdi-send' ></i></button></a>&nbsp;        
+                                    <a href='../delivery/insertdeli.php?id=$row[pay_id]'><button type='button' class='btn btn-outline-info btn-rounded btn-icon'><i class='mdi mdi-send' ></i></button></a>&nbsp;        
                                     <a href='viewpay.php?id=$row[pay_id]'><button type='button' class='btn btn-outline-primary btn-rounded btn-icon'><i class='mdi mdi-eye' ></i></button></a>&nbsp;
                                     <a href='updatepay.php?id=$row[pay_id]'><button type='button' class='btn btn-outline-warning btn-rounded btn-icon'>
                           <i class='mdi mdi-border-color text-warning' ></i></button></a>&nbsp;</td>";

@@ -26,12 +26,12 @@
             <?php include('../../partials/_sidebar.php') ?>
             <?php
             include('../../../lib/config.php');
-            $ID = $_REQUEST['id'];
+            $id = $_REQUEST['id'];
             $sql = "SELECT * FROM delivery 
             INNER JOIN employee ON employee.e_id=delivery.e_id 
             INNER JOIN pay on pay.pay_id=delivery.pay_id 
             INNER JOIN sale on sale.sale_id=delivery.pay_id 
-            INNER JOIN customer on customer.c_id=sale.c_id = '$ID' ";
+            INNER JOIN customer on customer.c_id=sale.c_id = '$id' ";
             $result = $conn->query($sql);
             $row = mysqli_fetch_assoc($result);
             ?>
@@ -52,9 +52,10 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <section class="panel">
-                                            <table class="table table-bordered" id="employee">
+                                            <table class="table table-bordered" id="delivery">
                                                 <thead>
                                                 <tbody>
+                                                <?php echo $row['deli_id'] ?>
                                                     <tr>
                                                         <td width=30% class="table-primary" align="right">รหัสการจัดส่ง</td>
                                                         <td><?php echo $row['deli_id'] ?></td>

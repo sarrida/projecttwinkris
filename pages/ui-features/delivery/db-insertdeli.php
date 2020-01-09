@@ -3,6 +3,7 @@ include('../../../lib/config.php');
 echo "\n";
 
 
+$deli_id = $_REQUEST['deli_id'];
 
 $pay_id = $_REQUEST['pay_id'];
 $deli_date = $_REQUEST['deli_date'];
